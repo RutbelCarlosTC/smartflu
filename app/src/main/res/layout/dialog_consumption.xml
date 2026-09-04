@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calcular el consumo"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="Salir"
+            android:layout_gravity="end"
+            android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="16dp">
+
+        <EditText
+            android:id="@+id/editTextInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Ingresa la cantidad de dias"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resultado"
+            android:paddingStart="16dp"/>
+
+    </LinearLayout>
+
+    <!-- Botón para calcular -->
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_gravity="end"
+        android:layout_width="match_parent"
+        android:backgroundTint="#2196F3"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="12pt"
+    android:layout_marginEnd="12pt"
+    android:orientation="vertical"
+    tools:context=".login.LoginUser">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:text="Iniciar sesion"
+        android:textColor="#2196F3"
+        android:textColorLink="#3F51B5"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:layout_marginStart="10pt"
+        android:layout_marginEnd="10pt" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:text="Ingresa tus datos en los siguientes campos" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <EditText
+        android:id="@+id/etCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:ems="10"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:ems="10"
+        android:gravity="center|start|right|center_horizontal"
+        android:hint="Contraseña"
+        android:inputType="textPassword" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:gravity="center"
+        android:textColor="#2196F3"
+        android:textColorLink="#3F51B5"
+        android:text="¿Olvidaste tu contraseña?" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:gravity="center"
+        android:text="No tienes una cuenta?" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="goToRegister"
+        android:textColor="#2196F3"
+        android:textColorLink="#3F51B5"
+        android:text="Registrarse" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:backgroundTint="#2196F3"
+        android:onClick="login"
+        android:text="Continuar" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

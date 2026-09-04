@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="12pt"
+    android:layout_marginEnd="12pt"
+    android:orientation="vertical"
+    tools:context=".components.OptionsDevice">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:text="SmartFlu"
+        android:textColor="#2196F3"
+        android:textColorLink="#3F51B5"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:layout_marginStart="10pt"
+        android:layout_marginEnd="10pt" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/live_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8pt"
+            android:layout_marginEnd="8pt"
+            android:backgroundTint="#2196F3"
+            android:onClick="goToLive"
+            android:text="Datos en tiempo real" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="8pt"
+            android:layout_marginEnd="8pt" />
+
+        <Button
+            android:id="@+id/forecasting_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8pt"
+            android:layout_marginEnd="8pt"
+            android:backgroundTint="#2196F3"
+            android:onClick="goToForecasted"
+            android:text="Prediccion" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="8pt"
+            android:layout_marginEnd="8pt" />
+
+        <Button
+            android:id="@+id/calculate_consumption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8pt"
+            android:layout_marginEnd="8pt"
+            android:backgroundTint="#2196F3"
+            android:onClick="showConsumptionModal"
+            android:text="Calcular consumo" />
+
+    </LinearLayout>
+
+</LinearLayout>

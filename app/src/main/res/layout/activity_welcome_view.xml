@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="12pt"
+    android:layout_marginEnd="12pt"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".login.WelcomeView">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:gravity="center"
+        android:text="!Bienvenido!"
+        android:textColor="#2196F3"
+        android:textColorLink="#3F51B5"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:gravity="center"
+        android:text="Hola. Por favor inicie sesion o registrese para comenzar."
+        android:textSize="15sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="10pt"
+        android:layout_marginEnd="10pt" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:backgroundTint="#2196F3"
+        android:onClick="goToLoginUser"
+        android:text="Iniciar sesion" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:backgroundTint="#2196F3"
+        android:onClick="goToRegisterUser"
+        android:text="Registrarse" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:backgroundTint="#2196F3"
+        android:onClick="goToRegisterDevice"
+        android:text="Registre su dispositivo" />
+</LinearLayout>

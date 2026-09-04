@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="12pt"
+    android:layout_marginEnd="12pt"
+    android:orientation="vertical"
+    tools:context=".login.RegisterDevice">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:text="Registra tu dispositivo!"
+        android:textColor="#2196F3"
+        android:textColorLink="#3F51B5"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:layout_marginStart="10pt"
+        android:layout_marginEnd="10pt" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:text="Por favor ingresa los siguientes datos para completar tu registro." />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <EditText
+        android:id="@+id/etUid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:ems="10"
+        android:hint="Id del dispositivo"
+        android:inputType="text" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:ems="10"
+        android:hint="Correo electronico"
+        android:inputType="textEmailAddress" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:ems="10"
+        android:hint="Nombre del Dispositivo"
+        android:inputType="text" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <EditText
+        android:id="@+id/etTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:ems="10"
+        android:hint="Tag"
+        android:inputType="text" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <Spinner
+        android:id="@+id/spSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:ems="10" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt" />
+
+    <Button
+        android:id="@+id/buttonReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8pt"
+        android:layout_marginEnd="8pt"
+        android:backgroundTint="#2196F3"
+        android:onClick="registerDevice"
+        android:text="Registrar" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

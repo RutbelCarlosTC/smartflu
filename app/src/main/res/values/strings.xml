@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">SmartFlu</string>
+    <string name="home">Principal</string>
+    <string name="devices">Dispositivos</string>
+    <string name="stats">Estadisticas</string>
+    <string name="world">Mundo</string>
+    <string name="recommendations">Consejos</string>
+    <string name="recommendation1">
+        Cuando el QI indique que la calidad del aire es baja, reduce o evita actividades físicas intensas al aire libre. Esto es especialmente importante para personas con problemas respiratorios, niños y ancianos.
+    </string>
+    <string name="recommendation2">
+        Revisa el QI a lo largo del día, especialmente si vives en una zona con variaciones significativas en la calidad del aire. Esto te permitirá anticipar momentos en los que la calidad del aire sea más baja y planificar tus actividades al aire libre en consecuencia.
+    </string>
+    <string name="recommendation3">
+        En días en que la calidad del aire sea mala, considera el uso de máscaras que filtren partículas finas (como las N95) si necesitas estar al aire libre. Estas máscaras pueden ayudar a reducir la inhalación de contaminantes dañinos.
+    </string>
+    <string name="recommendation4">
+        Mantén las ventanas y puertas cerradas en días con mala calidad del aire para evitar que los contaminantes entren en tu hogar. Se recomienda usar  purificadores de aire.
+    </string>
+    <string name="recommendation5">
+        Es importante beber suficiente agua y mantener una dieta equilibrada de manera que el cuerpo pueda combatir los efectos de la contaminación. Los antioxidantes presentes en frutas y verduras pueden ser particularmente beneficiosos.
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
