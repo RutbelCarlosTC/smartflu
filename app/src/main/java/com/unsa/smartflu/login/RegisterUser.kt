@@ -14,6 +14,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.FirebaseFirestore
 import com.unsa.smartflu.MainActivity
 import com.unsa.smartflu.R
 
@@ -24,6 +25,7 @@ class RegisterUser : AppCompatActivity() {
     private lateinit var editTextRepeatPassword: EditText
     private lateinit var buttonReg: Button
     private lateinit var mAuth: FirebaseAuth
+    private lateinit var db: FirebaseFirestore
     private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +45,7 @@ class RegisterUser : AppCompatActivity() {
         progressBar = findViewById(R.id.progressBar)
 
         mAuth = FirebaseAuth.getInstance()
+        db = FirebaseFirestore.getInstance()
     }
 
     fun register(v: View) {
@@ -75,15 +78,37 @@ class RegisterUser : AppCompatActivity() {
 
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener() { task ->
-                progressBar.setVisibility(View.GONE)
                 if (task.isSuccessful) {
-                    Toast.makeText(
-                        this@RegisterUser, "Cuenta creada.",
-                        Toast.LENGTH_SHORT
-                    ).show()
                     val user: FirebaseUser? = mAuth.currentUser
-                    goToPrincipal(user)
+                    val userData = hashMapOf(
+                        "devs" to arrayListOf<String>()
+                    )
+                    
+                    if (user?.email != null) {
+                        db.collection("users").document(user.email!!)
+                            .set(userData)
+                            .addOnSuccessListener {
+                                progressBar.setVisibility(View.GONE)
+                                Toast.makeText(
+                                    this@RegisterUser, "Cuenta creada y configurada.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                goToPrincipal(user)
+                            }
+                            .addOnFailureListener {
+                                progressBar.setVisibility(View.GONE)
+                                Toast.makeText(
+                                    this@RegisterUser, "Cuenta creada, pero hubo un error al configurar Firestore.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                goToPrincipal(user)
+                            }
+                    } else {
+                        progressBar.setVisibility(View.GONE)
+                        goToPrincipal(user)
+                    }
                 } else {
+                    progressBar.setVisibility(View.GONE)
                     Toast.makeText(
                         this@RegisterUser, "Autenticación fallida.",
                         Toast.LENGTH_SHORT

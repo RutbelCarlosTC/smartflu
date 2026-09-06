@@ -1,14 +1,14 @@
 {
   "project_info": {
-    "project_number": "800245718548",
-    "firebase_url": "https://airgoodapp-default-rtdb.firebaseio.com",
-    "project_id": "airgoodapp",
-    "storage_bucket": "airgoodapp.firebasestorage.app"
+    "project_number": "780412208390",
+    "firebase_url": "https://smartfluv2-default-rtdb.firebaseio.com",
+    "project_id": "smartfluv2",
+    "storage_bucket": "smartfluv2.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:800245718548:android:30d1c086bde2240ab71101",
+        "mobilesdk_app_id": "1:780412208390:android:61a1da4912783551048a87",
         "android_client_info": {
           "package_name": "com.unsa.smartflu"
         }
@@ -16,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAg_o1LRzCXaVY_X73glmcEqKrjCgwsAr0"
+          "current_key": "AIzaSyBZx25JFTI3MtZvaakn8F3UYJshmEaS3KA"
         }
       ],
       "services": {

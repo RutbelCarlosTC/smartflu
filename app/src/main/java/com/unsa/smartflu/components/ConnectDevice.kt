@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 import com.unsa.smartflu.MainActivity
 import com.unsa.smartflu.R
 import java.util.ArrayList
@@ -56,9 +57,17 @@ class ConnectDevice : AppCompatActivity() {
 
                 db.runTransaction { transaction ->
                     val snapshot = transaction.get(userDocRef)
-                    val devs = snapshot.get("devs") as? ArrayList<String> ?: arrayListOf()
-                    devs.add(id)
-                    transaction.update(userDocRef, "devs", devs)
+                    val devs = if (snapshot.exists()) {
+                        snapshot.get("devs") as? ArrayList<String> ?: arrayListOf()
+                    } else {
+                        arrayListOf()
+                    }
+                    
+                    if (!devs.contains(id)) {
+                        devs.add(id)
+                    }
+                    
+                    transaction.set(userDocRef, hashMapOf("devs" to devs), SetOptions.merge())
                 }
                     .addOnSuccessListener {
                         Toast.makeText(this@ConnectDevice, "Dispositivo vinculado correctamente", Toast.LENGTH_SHORT).show()

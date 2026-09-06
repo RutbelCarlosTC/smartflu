@@ -64,6 +64,12 @@ class MainActivity : AppCompatActivity() {
                     if (snapshot != null && snapshot.exists()) {
                         val deviceIds = snapshot.get("devs") as? ArrayList<String> ?: arrayListOf()
 
+                        if (deviceIds.isEmpty()) {
+                            deviceList.clear()
+                            deviceAdapter.notifyDataSetChanged()
+                            return@addSnapshotListener
+                        }
+
                         db.collection("devices")
                             .whereIn("id", deviceIds)
                             .addSnapshotListener { value, error ->
